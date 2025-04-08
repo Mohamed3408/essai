@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="youssef.css">
+    <title>ACWA Robotics</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Bleu clair */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #2196f3; /* Bleu standard */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* New Navbar styles */
+        .navbar {
+            display: flex; /* Affichage en ligne (horizontal) */
+            justify-content: space-between; /* Espace entre le logo et les liens */
+            align-items: center; /* Centre les éléments verticalement */
+            background: #007BFF; /* Couleur de fond bleue */
+            padding: 15px 30px; /* Espacement intérieur */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        }
+
+        /* Style du logo */
+        .logo {
+            font-size: 24px; /* Taille du texte */
+            font-weight: bold; /* Met en gras */
+            color: white; /* Texte en blanc */
+        }
+
+        /* Liste des liens */
+        .nav-links {
+            list-style: none; /* Supprime les puces */
+            display: flex; /* Affichage en ligne */
+        }
+
+        /* Style des liens */
+        .nav-links li {
+            margin: 0 15px; /* Espacement entre chaque lien */
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background-color: #1565c0;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s forwards, slideInLeft 1s ease-out;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2196f3; /* Bleu standard */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Image styles */
+        .robot-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 1.3s ease, box-shadow 0.3s ease;
+        }
+
+        .robot-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: scaleIn 1.5s ease-out;
+        }
+
+        /* Textual sections */
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .benefit-item {
+            flex: 1 1 45%;
+            margin: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .benefit-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item h3 {
+            color: #1976d2;
+            font-size: 1.5em;
+            transition: transform 1.3s ease, color 1.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-item:hover h3 {
+            color: #0d47a1;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- New navbar -->
+    <div class="navbar">
+        <div class="logo">ACWA Robotics</div>
+        <ul class="nav-links">
+            <li><a href="moha.html">Accueil</a></li>
+            <li><a href="youssef.html">eco-Innovation</a></li>
+            <li><a href="htmlsite.html">entreprise</a></li>
+            <li><a href="clara.html">ECOINFO</a></li>
+        </ul>
+    </div>
+ <header>
+        <h1>ACWA Robotics</h1>
+        <p>La technologie au service de vos canalisations</p>
+    </header>
+    <main>
+        <section id="accueil">
+            <h2>Présentation</h2>
+            <p>Nous vous présentons une solution robotique innovante pour résoudre un problème courant : le débouchage des canalisations. Le robot ACWA est conçu pour nettoyer les canalisations de manière autonome et efficace, sans intervention humaine.</p>
+            <img class="robot-image" src="https://th.bing.com/th/id/R.aaab7c52de5a237545470e3c91eca6fd?rik=tcUsvX2gj%2boy%2bA&pid=ImgRaw&r=0" alt="Robot ACWA en action">
+        </section>
+
+        <section id="robot">
+            <h2>Le Robot ACWA</h2>
+            <p>Le robot ACWA révolutionne l'entretien des canalisations en offrant une solution rapide, autonome et efficace pour résoudre tous vos problèmes de bouchons. Son design innovant et ses fonctionnalités avancées font de lui un outil incontournable dans l'industrie de la plomberie.</p>
+            <img class="robot-image" src="https://th.bing.com/th/id/R.934dad7c75d694bb9f4c9d9f44267a1c?rik=XR07pyaqaYsqeg&pid=ImgRaw&r=0" alt="Robot ACWA dans une canalisation">
+            <p>Le robot ACWA est capable de se déplacer dans vos canalisations, détecter les obstructions et les éliminer avec une précision inégalée. Grâce à ses capteurs et à son intelligence artificielle, il est capable d'adapter ses actions en fonction du type de blocage rencontré (graisses, racines, déchets, etc.).</p>
+
+            <h3>Pourquoi choisir le robot ACWA ?</h3>
+            <div class="benefits">
+                <div class="benefit-item">
+                    <img src="https://acwa-robotics.lagenza.corsica/ag_admin/photo/zone/36/0688034152_120x120x75.webp" alt="Navigation autonome">
+                    <h3>Navigation autonome</h3>
+                    <p>Le robot se déplace de manière autonome dans les canalisations, ce qui réduit la nécessité d'interventions humaines et garantit une efficacité maximale.</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://acwa-robotics.lagenza.corsica/ag_admin/photo/zone/36/5820274152_120x120x75.webp" alt="Technologie Avancée">
+                    <h3>Technologie avancée</h3>
+                    <p>Avec ses capteurs de pointe et son IA, le robot peut identifier différents types de blocages, adopter la meilleure stratégie et déboucher rapidement vos canalisations.</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://acwa-robotics.lagenza.corsica/ag_admin/photo/zone/36/6736524152_120x120x75.webp" alt="Efficace et rapide">
+                    <h3>Efficace et rapide</h3>
+                    <p>Notre robot effectue des débouchages en un temps record, ce qui vous fait économiser de l'argent et du temps par rapport aux méthodes traditionnelles.</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://acwa-robotics.lagenza.corsica/ag_admin/photo/zone/36/1914604152_120x120x75.webp" alt="Respectueux de l'environnement">
+                    <h3>Respectueux de l'environnement</h3>
+                    <p>Le robot fonctionne sans produits chimiques, ce qui en fait une solution écologiquement responsable tout en préservant vos installations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Développement et intégration de robots autonomes pour le débouchage des canalisations</li>
+                <li>Formation et support technique pour l'utilisation du robot ACWA</li>
+                <li>Maintenance et mises à jour des systèmes robotiques</li>
+                <li>Conseils en automatisation et robotique pour l'industrie de la plomberie</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Pour plus d'informations ou pour une démonstration de notre robot ACWA, contactez-nous par email à <a href="mailto:contact@acwarobotics.com">contact@acwarobotics.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ACWA Robotics - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
