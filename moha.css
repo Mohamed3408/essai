@@ -1,0 +1,110 @@
+h1
+{
+font-family: "Comic Sans MS", cursive;
+font-size: 48px;
+}
+h2
+{
+font-family: "Comic Sans MS", Courier, monospace;
+font-size: 36px;
+}
+body
+{
+background-color: white;
+font-family: Brush Script MT, Brush Script Std, cursive;
+padding: 5px 25px;
+font-size: 18px;
+margin: 0;
+color: #444;
+}
+/*
+ceci est un message
+*/
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 10px 20px;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #;
+        }
+        p {
+            color: #666;
+        }
+
+.navbar {
+display: flex; /* Affichage en ligne (horizontal) */
+justify-content: space-between; /* Espace entre le logo et les liens */
+align-items: center; /* Centre les éléments verticalement */
+background: #0057b3; /* Couleur de fond bleue */
+padding: 15px 30px; /* Espacement intérieur */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+/* Style du logo */
+.logo {
+font-size: 24px; /* Taille du texte */
+font-weight: bold; /* Met en gras */
+color: white; /* Texte en blanc */
+}
+/* Liste des liens */
+.nav-links {
+list-style: none; /* Supprime les puces */
+display: flex; /* Affichage en ligne */
+}
+/* Style des liens */
+.nav-links li {
+margin: 0 15px; /* Espacement entre chaque lien */
+}
+.nav-links a {
+text-decoration: none; /* Supprime le soulignement */
+color: white; /* Texte blanc */
+font-size: 18px;
+transition: 0.3s; /* Animation fluide */
+}
+/* Effet au survol */
+.nav-links a:hover {
+color: #ffcc00; /* Change en jaune au survol */
+}
+/* ---- RESPONSIVE (pour mobile) ---- */
+@media screen and (max-width: 768px) {
+
+.navbar {
+flex-direction: column; /* Passe en colonne sur mobile */
+}
+.nav-links {
+flex-direction: column; /* Affichage vertical */
+text-align: center;
+padding: 10px 0;
+}
+.nav-links li {
+margin: 10px 0; /* Espacement augmenté */
+}
+}

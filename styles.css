@@ -1,0 +1,132 @@
+/* Styles généraux */
+body {
+    background: linear-gradient(to right, #e3f2fd, #ffffff); /* Dégradé de bleu clair vers blanc en arrière-plan */
+    font-family: 'Poppins', sans-serif; /* Police moderne sans serif */
+    color: #333; /* Couleur du texte (gris foncé) */
+    margin: 0; /* Supprime les marges du body */
+    padding: 0; /* Supprime les paddings du body */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.container {
+    background: white; /* Fond blanc pour le conteneur */
+    padding: 40px; /* Espacement intérieur */
+    margin: 50px auto; /* Centré horizontalement avec un espace vertical */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Ombre légère autour du conteneur */
+    max-width: 900px; /* Largeur maximale de 900px */
+    animation: fadeIn 1s ease-in-out; /* Animation d’apparition */
+}
+
+/* Animation personnalisée pour faire apparaître en fondu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); } /* Départ : invisible et légèrement décalé vers le haut */
+    to { opacity: 1; transform: translateY(0); } /* Fin : visible et en position normale */
+}
+
+h1 {
+    font-size: 42px; /* Taille du titre principal */
+    font-weight: bold; /* Texte en gras */
+    color: #0056b3; /* Bleu foncé */
+    margin-bottom: 20px; /* Espace sous le titre */
+    transition: transform 0.3s ease-in-out; /* Animation lors du survol */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Agrandit légèrement le titre au survol */
+}
+
+p {
+    font-size: 18px; /* Taille du texte */
+    line-height: 1.8; /* Hauteur de ligne pour lisibilité */
+    max-width: 800px; /* Largeur maximale du paragraphe */
+    margin: 10px auto; /* Centré avec espace vertical */
+    text-align: justify; /* Texte justifié */
+}
+
+img {
+    max-width: 100%; /* L'image prend 100% de son conteneur sans dépasser */
+    height: auto; /* Hauteur proportionnelle à la largeur */
+    margin-bottom: 20px; /* Espace en dessous de l’image */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.btn {
+    display: inline-block; /* Affichage en ligne mais accepte les dimensions */
+    background: #007BFF; /* Fond bleu */
+    color: white; /* Texte blanc */
+    padding: 12px 25px; /* Espacement interne */
+    border-radius: 25px; /* Forme de bouton arrondi */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 18px; /* Taille du texte */
+    transition: 0.3s; /* Animation fluide */
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+.btn:hover {
+    background: #ff6600; /* Couleur orange au survol */
+    transform: scale(1.1); /* Légère agrandissement au survol */
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    background: #007BFF; /* Fond bleu */
+    padding: 15px 30px; /* Espacement intérieur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre sous la barre */
+}
+
+.logo {
+    font-size: 24px; /* Taille du texte du logo */
+    font-weight: bold; /* Gras */
+    color: white; /* Texte blanc */
+}
+
+.nav-links {
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Affiche les liens horizontalement */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Espace horizontal entre les liens */
+}
+
+.nav-links a {
+    text-decoration: none; /* Pas de soulignement */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille du texte */
+    transition: 0.3s; /* Animation au survol */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Couleur jaune au survol */
+}
+
+/* Sections avec images */
+.illustration {
+    width: 100%; /* Largeur complète du conteneur */
+    max-width: 600px; /* Largeur maximale pour ne pas dépasser */
+    display: block; /* Affiché comme un bloc */
+    margin: 20px auto; /* Centré horizontalement avec marge verticale */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre autour de l’image */
+}
+
+/* Responsive pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Navigation en colonne au lieu de ligne */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Liens empilés verticalement */
+        text-align: center; /* Texte centré */
+        padding: 10px 0; /* Espace vertical autour des liens */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Espace vertical entre les liens */
+    }
+}
